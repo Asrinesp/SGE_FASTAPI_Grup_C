@@ -1,4 +1,4 @@
-from ..schema import read_sch
+from schema import read_sch
 
 def registre():
     users = {
