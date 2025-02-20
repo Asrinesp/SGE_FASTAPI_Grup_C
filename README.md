@@ -28,3 +28,33 @@ def schema(usr) -> dict:
 def schemas(users) -> list[dict]:
     return [schema(user) for k,user in users.items()]
 ```
+
+A continuació, hem d'inserir el codi a `read.py`, dins la carpeta `services`. Aquest arxiu és el que permet treballar amb consultes del client i proporcionar respostes al `main.py`.
+
+```commandline
+from schema import read_sch
+
+def registre():
+    users = {
+        "user1":{
+            "id": 1,
+            "name": "Roger",
+            "surname": "Sobrino",
+            "age": 49
+        },
+        "user2": {
+            "id": 2,
+            "name": "Josep Oriol",
+            "surname": "Roca",
+            "age": 23
+        },
+        "user3": {
+            "id": 3,
+            "name": "Juan Manuel",
+            "surname": "Sanchez",
+            "age": 40
+        }
+    }
+    
+    return read_sch.schema(users)
+```
