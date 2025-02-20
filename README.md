@@ -16,9 +16,9 @@ Posteriorment, afegim el codi al `connect.py`, tal com vam fer a l'activitat ant
 
 Després, afegim el codi a l'arxiu `read_sch.py`, dins de la carpeta `schema`.
 
-```commandline
+```python
 def schema(usr) -> dict:
-    send_usr = {"id":["id"],
+    send_usr = {"id":usr["id"],
                 "name":usr["name"],
                 "surname":usr["surname"],
                 "age":usr["age"],
@@ -31,7 +31,7 @@ def schemas(users) -> list[dict]:
 
 A continuació, hem d'inserir el codi a `read.py`, dins la carpeta `services`. Aquest arxiu és el que permet treballar amb consultes del client i proporcionar respostes al `main.py`.
 
-```commandline
+```python
 from schema import read_sch
 
 def registre():
@@ -55,13 +55,12 @@ def registre():
             "age": 40
         }
     }
-    
-    return read_sch.schema(users)
+
+    return read_sch.schemas(users)
 ```
 
 L'últim arxiu al que li hem de posar codi és el `main.py`, a l'arrel del projecte. Aquest arxiu serà el que controlarà el programa, segons la consulta rebuda.
-
-```commandline
+```python
 from typing import List
 from fastapi import FastAPI
 from services import read
@@ -74,3 +73,14 @@ async def read_root():
     return result
 ```
 
+Quan hem comprovat que tot estigui correcte, hem de posar la següent comanda al terminal, des de l'arrel del projecte:
+
+```commandline
+uvicorn main:app --reload
+```
+
+En executar-lo, al terminal sortirà el que nosaltres veiem al FastAPI, incloent els errors i a on es troba cadascun.
+
+![003.jpg](.img/003.jpg)
+
+Fins que no es tanqui el FastAPI, no es tancarà l'execució del terminal.

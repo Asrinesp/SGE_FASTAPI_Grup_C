@@ -1,5 +1,5 @@
 def schema(usr) -> dict:
-    send_usr = {"id":["id"],
+    send_usr = {"id":usr["id"],
                 "name":usr["name"],
                 "surname":usr["surname"],
                 "age":usr["age"],
@@ -8,4 +8,3 @@ def schema(usr) -> dict:
 
 def schemas(users) -> list[dict]:
     return [schema(user) for k,user in users.items()]
-
