@@ -14,3 +14,17 @@ Posteriorment, afegim el codi al `connect.py`, tal com vam fer a l'activitat ant
 
 ![002.jpg](.img/002.jpg)
 
+Després, afegim el codi a l'arxiu `read_sch.py`, dins de la carpeta `schema`.
+
+```commandline
+def schema(usr) -> dict:
+    send_usr = {"id":["id"],
+                "name":usr["name"],
+                "surname":usr["surname"],
+                "age":usr["age"],
+                }
+    return send_usr
+
+def schemas(users) -> list[dict]:
+    return [schema(user) for k,user in users.items()]
+```
