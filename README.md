@@ -58,3 +58,19 @@ def registre():
     
     return read_sch.schema(users)
 ```
+
+L'últim arxiu al que li hem de posar codi és el `main.py`, a l'arrel del projecte. Aquest arxiu serà el que controlarà el programa, segons la consulta rebuda.
+
+```commandline
+from typing import List
+from fastapi import FastAPI
+from services import read
+
+app = FastAPI()
+
+@app.get("/root", response_model=List[dict])
+async def read_root():
+    result = read.registre()
+    return result
+```
+
