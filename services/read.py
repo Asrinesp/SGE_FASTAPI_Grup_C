@@ -9,13 +9,13 @@ def registre():
             "age":49
         },
         "user2": {
-            "i": 2,
+            "id": 2,
             "name":"Josep Oriol",
             "surname":"Roca",
             "age": 23
         },
         "user3": {
-            "i": 3,
+            "id": 3,
             "name": "Juan Manuel",
             "surname": "Sanchez",
             "age": 40
