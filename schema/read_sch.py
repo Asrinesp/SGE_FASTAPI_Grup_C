@@ -9,3 +9,8 @@ def schema(usr) -> dict:
 
 def schemas(users) -> list [dict]:
     return [schema(user) for k,user in users.items()]
+
+
+
+
+
