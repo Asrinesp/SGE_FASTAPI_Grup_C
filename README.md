@@ -175,5 +175,41 @@ Creem una carpeta, anomenada models, per poder treballar amb el model que establ
 A aquesta carpeta, hem de crear un arxiu anomenat `__init__.py`, que quedarà buit, i `User.py`, on inserirem el codi.
 
 ```python
+from sqlmodel import SQLModel, Field
 
+class User (SQLModel, table=True):
+    id: int = Field(default=None, primary_key=True)
+    name: str
+    email: str
 ```
+- `Field`: serveix per especificar configuracions als diferents caps.
+
+#### Modificació / creació dels endpoints
+
+Hem d'afegir, al final del `main.py`, un nou endpoint que cridi al mètode que fa la consulta a la base de dades i rep la resposta: els usuaris en json.
+
+```python
+@app.get("/users", response_model=list[dict])
+def read_user(db:Session = Depends(get_db)):
+    result = user.get_all_users(db)
+    return result
+```
+
+Creem un arxiu anomenat `user.py` dins de `services` i afegim el codi:
+
+```python
+from schema.users_sch import users_schema
+from sqlmodel import Session, select
+from models.User import User
+
+def get_all_users(db:Session):
+    sql_read = select(User)
+    users = db.exec(sql_read).all()
+    return users_schema
+```
+- `db:Session` desa a la base de dades la sessió de la connexió.
+- `select`: consulta de sql
+- `db.exec`: executa la base de dades
+
+A TERMINAR DE EXPLICAR A PARTIR DE AQUÍ, YA ESTÁ HECHO
+

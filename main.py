@@ -27,3 +27,13 @@ def get_db():
         yield db
     finally:
         db.close()
+
+@app.get("/users", response_model=list[dict])
+async def read_user(db:Session = Depends(get_db)):
+    result = user.get_all_users(db)
+    return result
+
+@app.post("/users", response_model=dict)
+def create_user(name:str, email:str, db:Session = Depends(get_db)):
+    result = user.add_new_user(name, email, db)
+    return result
