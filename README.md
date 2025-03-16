@@ -1,9 +1,23 @@
 # SGE_FASTAPI_Grup_C
 
 ![img.png](img.png)
-La imagen muestra la respuesta de una API FastAPI ejecutada localmente en http://127.0.0.1:8000/root, devolviendo una lista de usuarios en formato JSON con sus id, name, surname y age. En la parte superior se ve un ejemplo de solicitud GET con curl, y en la parte inferior, la documentación generada automáticamente por FastAPI, accesible desde http://127.0.0.1:8000/docs, donde se pueden probar las peticiones directamente. También se muestran los encabezados de la respuesta, indicando que es application/json y servida por Unicorn (Uvicorn).
+Se realizó una consulta SQL en pgAdmin para obtener todos los registros de la tabla public.user, ordenados por id de forma ascendente. La consulta devolvió un usuario con nombre "Akasha" y correo "Akasha@gmail.com", lo que confirma que los datos fueron almacenados correctamente en la base de datos.
 
+## Creación de Usuario mediante el Endpoint POST /users
+![img_1.png](img_1.png)
+Aquí se muestra cómo se hizo una solicitud POST a http://127.0.0.1:8000/users/, enviando un JSON con los datos de un nuevo usuario. La respuesta del servidor indica que el usuario se creó exitosamente, lo que confirma que la API está almacenando nuevos usuarios correctamente en la base de datos.
 
+## Prueba de Creación de Usuario con POST /users en la Documentación de la API
+![img_2.png](img_2.png)
+Esta imagen muestra la interfaz de la documentación de la API, donde se probó la solicitud POST /users, enviando los parámetros name y email. La respuesta confirma que el usuario fue registrado con éxito, validando que el sistema gestiona correctamente la creación de usuarios.
+
+## Recuperación de Usuarios con GET /users
+![img_3.png](img_3.png)
+Se ejecutó una solicitud GET /users para recuperar los usuarios almacenados en la base de datos.
+
+## Consulta de Usuarios en PostgreSQL desde pgAdmin
+![img_4.png](img_4.png)
+Se realizó una consulta SQL en pgAdmin para obtener todos los registros de la tabla public.user, ordenados por id de forma ascendente. La consulta devolvió un usuario con nombre "Akasha" y correo "Akasha@gmail.com", lo que confirma que los datos fueron almacenados correctamente en la base de datos.
 
 
 
