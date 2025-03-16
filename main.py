@@ -5,7 +5,14 @@ from dotenv import load_dotenv
 from services import read
 from services import user
 import os
-#OtravezA
+
+app = FastAPI()
+
+@app.get("/root", response_model=List[dict])
+async  def read_root():
+    result = read.registre()
+    return result
+
 load_dotenv()
 DATABASE_URL = os.getenv("DATABASE_URL")
 engine = create_engine(DATABASE_URL)
@@ -27,9 +34,4 @@ def read_user(db: Session = Depends(get_db)):
 @app.post("/users", response_model=dict)
 def create_user(name: str, email: str, db: Session = Depends(get_db)):
     result = user.add_new_user(name, email, db)
-    return result
-app = FastAPI()
-@app.get("/root", response_model=List[dict])
-async  def read_root():
-    result = read.registre()
     return result
