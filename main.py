@@ -13,6 +13,11 @@ async  def read_root():
     result = read.registre()
     return result
 
+@app.get("/root", response_model=dict)
+async def perupdate(email: str):
+    resultp = user.update_user(email)
+    return resultp
+
 load_dotenv()
 DATABASE_URL = os.getenv("DATABASE_URL")
 engine = create_engine(DATABASE_URL)
@@ -34,4 +39,13 @@ def read_user(db: Session = Depends(get_db)):
 @app.post("/users", response_model=dict)
 def create_user(name: str, email: str, db: Session = Depends(get_db)):
     result = user.add_new_user(name, email, db)
+    return result
+
+@app.put("/users/{id}", response_model=dict)
+def update_user(db: Session = Depends(get_db)):
+    result = user.update_user(db)
+    return result
+@app.delete("/users/{id}", response_model=dict)
+def delete_user(db: Session = Depends(get_db)):
+    result = user.delete_user(db)
     return result
