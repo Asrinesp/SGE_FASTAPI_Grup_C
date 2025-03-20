@@ -2,7 +2,7 @@ from typing import List
 from fastapi import FastAPI, Depends
 from sqlmodel import SQLModel, create_engine, Session
 from dotenv import load_dotenv
-from services import read
+from services import read, user
 from models import user
 import os
 
@@ -35,4 +35,9 @@ async def read_root():
 @app.post("/users/", response_model=dict)
 def create_user(name: str, email: str, db: Session = Depends(get_db)):
     result = user.add_new_user(name, email, db)
+    return result
+
+@app.put("/users/", response_model=dict)
+def update_heroes(db: Session = Depends(get_db)):
+    result = user.update_heroes(db)
     return result

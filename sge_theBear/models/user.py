@@ -6,7 +6,3 @@ class User(SQLModel, table=True):
     name: str
     email: str
 
-def get_all_users(db:Session):
-    sql_read = select(User)
-    users = db.exec(sql_read).all()
-    return users_schema(users)
