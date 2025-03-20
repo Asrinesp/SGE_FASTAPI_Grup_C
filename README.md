@@ -211,5 +211,13 @@ def get_all_users(db:Session):
 - `select`: consulta de sql
 - `db.exec`: executa la base de dades
 
-A TERMINAR DE EXPLICAR A PARTIR DE AQUÍ, YA ESTÁ HECHO
+El resultat final, entrant a `127.0.0.1:8000/docs` hauria de ser que, en posar la següent consulta:
 
+![004.jpg](.img/004.jpg)
+
+Doni la següent resposta:
+
+![005.jpg](.img/005.jpg)
+![006.jpg](.img/006.jpg)
+
+### CRUD taula user
