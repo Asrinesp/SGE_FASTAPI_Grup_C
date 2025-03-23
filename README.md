@@ -22,19 +22,18 @@ Se realizó una consulta SQL en pgAdmin para obtener todos los registros de la t
 
 
 ## Actualizar usuario
-Se probó la actualización de un usuario utilizando PUT /update_user/. Se envió un ID junto con un nuevo nombre como parámetro.
-La API devolvió un mensaje confirmando que la actualización se realizó con éxito. Esto indica que el sistema permite modificar datos de usuarios correctamente.
+Se actualizó un usuario usando el método PUT a la ruta /update_user/, enviando un ID junto con el nuevo nombre como parámetro. La API respondió con un mensaje confirmando que la actualización se hizo bien. Esto muestra que el sistema está funcionando bien para modificar los datos de los usuarios.
 
 ![Actualizat.jpeg](sge_theBear/img/Actualizat.jpeg)
 
 ## Eliminar usuario
-Para probar la eliminación de un usuario, se realizó una solicitud DELETE a /user/delete/, enviando el ID del usuario a eliminar.
-La API respondió con un mensaje confirmando que el usuario fue eliminado correctamente. Posteriormente, se verificó en pgAdmin y se confirmó que el usuario ya no estaba en la base de datos.
+Para eliminar a un usuario, se hizo una solicitud DELETE a /user/delete/, pasando el ID del usuario a borrar. La respuesta de la API confirmó que el usuario fue eliminado con éxito. Después, verificamos en pgAdmin y efectivamente, el usuario ya no estaba en la base de datos.
+
 
 ![Eliminar.jpeg](sge_theBear/img/Eliminar.jpeg)
 
+## Conclusión
+Hemos creado un usuario, actualizado su información y luego lo eliminamos sin problemas.
+Las pruebas en la API de FastAPI funcionaron bien, y al revisar en pgAdmin, vimos que los cambios se guardaron correctamente en la base de datos. Todo está funcionando como debería. 
 
-
-
-
-
+![Result.png](sge_theBear/img/Result.png)
