@@ -1,7 +1,5 @@
 from http.client import responses
-
 from sqlalchemy.orm import Session
-
 
 def user_schema(user) -> dict:
     response = {"user":user}

@@ -1,4 +1,4 @@
-# SGE_FASTAPI_Grup_C
+ SGE_FASTAPI_Grup_C
 
 ![img.png](img.png)
 Se realizó una consulta SQL en pgAdmin para obtener todos los registros de la tabla public.user, ordenados por id de forma ascendente. La consulta devolvió un usuario con nombre "Akasha" y correo "Akasha@gmail.com", lo que confirma que los datos fueron almacenados correctamente en la base de datos.
@@ -12,7 +12,7 @@ Aquí se muestra cómo se hizo una solicitud POST a http://127.0.0.1:8000/users/
 Esta imagen muestra la interfaz de la documentación de la API, donde se probó la solicitud POST /users, enviando los parámetros name y email. La respuesta confirma que el usuario fue registrado con éxito, validando que el sistema gestiona correctamente la creación de usuarios.
 
 ## Recuperación de Usuarios con GET /users
-![img_3.png](img_3.png)
+![img_3.png](im.png)
 Se ejecutó una solicitud GET /users para recuperar los usuarios almacenados en la base de datos.
 
 ## Consulta de Usuarios en PostgreSQL desde pgAdmin
