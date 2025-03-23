@@ -16,3 +16,15 @@ localmente, con el comando:
 ```
 uvicorn main:app --reload
 ````
+
+##### Endpoints ----
+![EndPoint 1](./endPoints_Image/endPoints_1.jpeg) 
+![EndPoint 2](./endPoints_Image/endPoints_2.jpeg) 
+![EndPoint 3](./endPoints_Image/endPoints_3.jpeg) 
+<br>
+#### Tercera Entrega
+En esta entrega agregamos UPDATE y DELETE, para completar el CRUD.<br>
+Nos guiamos a partir del contenido de esta web <br>
+```
+**https://fastapi.tiangolo.com/tutorial/response-status-code/?h=%40app#response-status-code**
+```

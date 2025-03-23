@@ -16,19 +16,20 @@ def add_new_user(name: str, email: str, db:Session):
 
 def update_user(db:Session):
         statement = select(User).where(User.id == "1")
-        results = db.execute(statement)
+        results = db.exec(statement)
         user = results.one()
         print("Usuario: ", user)
 
         user.email = "carlosdondeestas@itic.cat"
         db.add(user)
         db.commit()
-        return {"mensaje": user}
+        return {"mensaje": "Update sucessfully"}
 
 def delete_user(db:Session):
     statement = select(User).where(User.id == "1")
     results = db.execute(statement)
     user = results.one()
-    print("User: ", user)
+
     db.delete(user)
     db.commit()
+    return {"mensaje": "User deleted successfully"}
