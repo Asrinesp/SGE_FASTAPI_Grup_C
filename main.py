@@ -9,7 +9,7 @@ import os
 app = FastAPI()
 
 @app.get("/root", response_model=List[dict])
-async  def read_root():
+async def read_root():
     result = read.registre()
     return result
 
@@ -37,10 +37,10 @@ def create_user(name: str, email: str, db: Session = Depends(get_db)):
     return result
 
 @app.put("/updt_user/", response_model=dict)
-def update_user(db: Session = Depends(get_db)):
-    result = user.update_user(db)
+def update_user(id:int,name: str, db:Session = Depends(get_db)):
+    result = user.update_user(id, name, db)
     return result
-@app.delete("/dlt_users{id}", response_model=dict)
-def delete_user(db: Session = Depends(get_db)):
+@app.delete("/user/dlt_users/", response_model=dict)
+def delete_user(id:int, db:Session = Depends(get_db)):
     result = user.delete_user(id, db)
     return result

@@ -14,22 +14,20 @@ def add_new_user(name: str, email: str, db:Session):
     db.refresh(db_user)
     return {"mensaje": "Created user successfully"}
 
-def update_user(db:Session):
-        statement = select(User).where(User.id == "1")
-        results = db.exec(statement)
-        user = results.one()
-        print("Usuario: ", user)
+def update_user(id: int, name:str, db:Session):
+        statement = select(User).where(User.id == id)
+        user_db= db.exec(statement).one()
+        ##print("Usuario: ", user) --esto no
 
-        user.email = "carlosdondeestas@itic.cat"
-        db.add(user)
+        user_db.email = name
+        db.add(user_db)
         db.commit()
         return {"mensaje": "Update sucessfully"}
 
-def delete_user(db:Session):
-    statement = select(User).where(User.id == "1")
-    results = db.execute(statement)
-    user = results.one()
+def delete_user(id:int, db:Session):
+    statement = select(User).where(User.id == id)
+    user_db= db.exec(statement).one()
 
-    db.delete(user)
+    db.delete(user_db)
     db.commit()
     return {"mensaje": "User deleted successfully"}

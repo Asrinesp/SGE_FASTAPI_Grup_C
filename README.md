@@ -28,3 +28,6 @@ Nos guiamos a partir del contenido de esta web <br>
 ```
 **https://fastapi.tiangolo.com/tutorial/response-status-code/?h=%40app#response-status-code**
 ```
+Este es el código que he escrito.
+![Func.Updt-Dlt](./endPoints_Image/Propuesta%20Solucion_errada.png)
+Más no puedo ver los nuevos Endpoints CRUD
