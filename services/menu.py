@@ -1,6 +1,6 @@
-from schema.menu_sch import menu_schema, menus_schema
+from schema.client_sch import client_schema, clients_schema
+from models.client import Client
 from sqlmodel import Session, select
-from models.menu import Menu
 
 
 # Obtener todos los items del menú
