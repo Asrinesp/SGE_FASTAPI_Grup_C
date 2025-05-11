@@ -1,6 +1,6 @@
-from schema.client_sch import client_schema, clients_schema
+from sge_theBear.schema.client_sch import client_schema, clients_schema
+from sge_theBear.models.client import Client
 from sqlmodel import Session, select
-from models.client import Client
 
 
 # Obtener todas las citas de clientes
