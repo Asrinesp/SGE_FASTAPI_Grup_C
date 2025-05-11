@@ -6,5 +6,6 @@ def client_schema(client) -> dict:
     }
     return send_client
 
-def schemas(clients) -> list[dict]:
+# Cambiar el nombre de 'schemas' a 'clients_schema'
+def clients_schema(clients) -> list[dict]:
     return [client_schema(client) for client in clients.values()]
