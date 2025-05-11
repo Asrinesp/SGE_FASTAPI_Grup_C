@@ -1,0 +1,30 @@
+##Import necesario
+from services import PoS
+
+@app.get("/puntosV/", response_model=list[dict])
+def read_all_puntoV(db: Session = Depends(get_db)):
+    result = PoS.get_all_puntVs(db)
+    return result
+
+##READ ONE
+@app.get("/puntV/id/{numero}")
+def read_one_puntV(numero: int, db: Session = Depends(get_db)):
+    result = PoS.get_one_puntV(numero, db)
+    return result
+###CREAMOS UNO
+@app.post("/puntV/", response_model=dict)
+def create_puntV(id: int, ubicacion: str, db: Session = Depends(get_db)):
+    result = PoS.add_new_puntV(id, ubicacion, db)
+    return result
+
+##MODIFICAMOS UNO
+@app.put("/update_puntV", response_model=dict)
+async def update_puntV(id: int, ubicacion: str, db: Session = Depends(get_db)):
+    result = PoS.update_puntV(id, ubicacion, db)
+    return result
+
+##ELIMINAMOS UNO
+@app.delete("/PoS/delete/", response_model=dict)
+async def delete_puntV(id: int, db: Session = Depends(get_db)):
+    result = PoS.delete_puntV(id, db)
+    return result
