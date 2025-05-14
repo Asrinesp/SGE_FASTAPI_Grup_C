@@ -170,7 +170,7 @@ Eliminar cliente
 <br>
 
 ### Rutas para Menu
-Consultar productos del menúgit
+Consultar productos del menúgitgit
 
 ![img_1.png](sge_theBear/IMG Menu/GET.png)
 
