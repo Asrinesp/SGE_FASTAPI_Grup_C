@@ -28,3 +28,32 @@ async def update_puntV(id: int, ubicacion: str, db: Session = Depends(get_db)):
 async def delete_puntV(id: int, db: Session = Depends(get_db)):
     result = PoS.delete_puntV(id, db)
     return result
+
+
+ ''''''' CONTENIR '''''
+ ##READ ALL
+@app.get("/Contiene/", response_model=List[dict])
+def read_all_contE(db: Session = Depends(get_db)):
+    result = Contiene.get_all_contE(db)
+    return result
+##READ ONE
+@app.get("/Contiene/id/{numero}")
+def read_one_contE(id_menu: int, db: Session = Depends(get_db)):
+    result = Contiene.get_one_contE(id_menu, db)
+    return result
+##CREAMOS UNA
+@app.post("/Contiene/", response_model=dict)
+def create_contE(id_menu: int, id_ingediente: int, db: Session = Depends(get_db)):
+    result = Contiene.add_new_puntV(id_menu, id_ingediente, db)
+    return result
+##MODIFICAMOS UNO
+@app.put("/update_contE", response_model=dict)
+async def update_contE(id_menu: int, id_ingrediente: int, db: Session = Depends(get_db)):
+    result = Contiene.update_contE(id_menu, id_ingrediente, db)
+    return result
+
+##ELIMINAMOS UNO
+@app.delete("/PoS/delete/", response_model=dict)
+async def delete_contE(id_menu: int, db: Session = Depends(get_db)):
+    result = Contiene.delete_contE(id_menu, db)
+    return result
