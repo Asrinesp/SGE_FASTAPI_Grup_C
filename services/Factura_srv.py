@@ -47,8 +47,3 @@ def update_factura(
     db.commit()
     db.refresh(factura)
     return {"message": "Bill updated successfully"}
-
-
-
-
-

@@ -6,4 +6,4 @@ def prove_schema(proveidor) -> dict:
     return prove
 
 def prove_schemas(proveidors) -> list[dict]:
-    return [prove_schema(proveidor) for k,proveidor in proveidors.items()]
+    return [prove_schema(proveidor) for proveidor in proveidors]
