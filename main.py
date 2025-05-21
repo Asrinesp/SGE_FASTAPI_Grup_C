@@ -15,6 +15,10 @@ from services.menu import get_all_menu_items, add_menu_item, update_menu_item, d
 from models.client import Client
 from models.menu import Menu
 
+# archivos alvaro
+from services.Contiene import get_all_contE, get_one_contE, add_new_puntV, update_contE, delete_contE
+from services.PoS import get_one_puntV, get_all_puntVs, add_new_puntV, update_puntV, delete_puntV
+
 app = FastAPI()
 
 # CORS para la tecnologia de frontend
@@ -129,4 +133,65 @@ def modify_menu_item(item_id: int, producte: str, precio: int, fecha_y_hora: str
 @app.delete("/menu/{item_id}", response_model=dict)
 def remove_menu_item(item_id: int, db: Session = Depends(get_db)):
     result = delete_menu_item(item_id, db)
+    return result
+
+## ALVARO
+@app.get("/puntosV/", response_model=list[dict])
+def read_all_puntoV(db: Session = Depends(get_db)):
+    result = get_all_puntVs(db)
+    return result
+
+##READ ONE
+@app.get("/puntV/id/{numero}")
+def read_one_puntV(numero: int, db: Session = Depends(get_db)):
+    result = get_one_puntV(numero, db)
+    return result
+###CREAMOS UNO
+@app.post("/puntV/", response_model=dict)
+def create_puntV(id: int, ubicacion: str, db: Session = Depends(get_db)):
+    result = add_new_puntV(id, ubicacion, db)
+    return result
+
+##MODIFICAMOS UNO
+@app.put("/update_puntV", response_model=dict)
+async def update_puntV(id: int, ubicacion: str, db: Session = Depends(get_db)):
+    result = update_puntV(id, ubicacion, db)
+    return result
+
+##ELIMINAMOS UNO
+@app.delete("/PoS/delete/", response_model=dict)
+async def delete_puntV(id: int, db: Session = Depends(get_db)):
+    result = delete_puntV(id, db)
+    return result
+
+
+# CONTENIR
+ ##READ ALL
+@app.get("/Contiene/", response_model=List[dict])
+def read_all_contE(db: Session = Depends(get_db)):
+    result = get_all_contE(db)
+    return result
+
+##READ ONE
+@app.get("/Contiene/id/{numero}")
+def read_one_contE(id_menu: int, db: Session = Depends(get_db)):
+    result = get_one_contE(id_menu, db)
+    return result
+
+##CREAMOS UNA
+@app.post("/Contiene/", response_model=dict)
+def create_contE(id_menu: int, id_ingediente: int, db: Session = Depends(get_db)):
+    result = add_new_puntV(id_menu, id_ingediente, db)
+    return result
+
+##MODIFICAMOS UNO
+@app.put("/update_contE", response_model=dict)
+async def update_contE(id_menu: int, id_ingrediente: int, db: Session = Depends(get_db)):
+    result = update_contE(id_menu, id_ingrediente, db)
+    return result
+
+##ELIMINAMOS UNO
+@app.delete("/PoS/delete/", response_model=dict)
+async def delete_contE(id_menu: int, db: Session = Depends(get_db)):
+    result = delete_contE(id_menu, db)
     return result
