@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Afegir Menú</title>
+  <link rel="stylesheet" href="../styles_main_page.css">
+</head>
+<body>
+  <div class="erp-container">
+    <div class="erp-capçalera dodo-style">
+      <header class="erp-header">
+        <div class="erp-logo">ERP Menús</div>
+        <nav class="erp-nav">
+          <a href="../main_page.html">Inici</a>
+          <a href="./menus_form.html">Menús</a>
+          <a href="../clients/clients_form.html">Clients</a>
+        </nav>
+        <div class="erp-user">Admin</div>
+      </header>
+    </div>
+
+    <div class="container">
+      <h1>Afegir Menú</h1>
+      <form id="menuForm">
+        <div class="form-group">
+          <label for="producte">Producte:</label>
+          <input type="text" id="producte" name="producte" required>
+        </div>
+
+        <div class="form-group">
+          <label for="precio">Preu:</label>
+          <input type="number" id="precio" name="precio" required>
+        </div>
+
+        <div class="form-group">
+          <label for="fecha">Data i hora:</label>
+          <input type="datetime-local" id="fecha" name="fecha" required>
+        </div>
+
+        <button type="submit">Afegir</button>
+      </form>
+
+      <br>
+      <div class="action-buttons">
+        <button><a href="menus_table.html" class="action-btn">MOSTRAR TAULA DE MENÚS</a></button>
+      </div>
+
+      <div id="message" class="message"></div>
+    </div>
+  </div>
+
+  <script src="script_form_menus.js"></script>
+</body>
+</html>

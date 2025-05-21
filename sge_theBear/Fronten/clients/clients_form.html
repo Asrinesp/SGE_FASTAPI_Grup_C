@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Afegir Client</title>
+  <link rel="stylesheet" href="../styles_main_page.css">
+</head>
+<body>
+  <div class="erp-container">
+    <div class="erp-capçalera dodo-style">
+      <header class="erp-header">
+        <div class="erp-logo">ERP Clients</div>
+        <nav class="erp-nav">
+          <a href="../main_page.html">Inici</a>
+          <a href="./clients_form.html">Clients</a>
+          <a href="../menus/menus_form.html">Menús</a>
+        </nav>
+        <div class="erp-user">Admin</div>
+      </header>
+    </div>
+
+    <div class="container">
+      <h1>Afegir Client</h1>
+      <form id="clientForm">
+        <div class="form-group">
+          <label for="name">Nom:</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="age">Edat:</label>
+          <input type="number" id="age" name="age" required>
+        </div>
+
+        <button type="submit">Afegir</button>
+      </form>
+
+      <br>
+      <div class="action-buttons">
+        <button><a href="clients_table.html" class="action-btn">MOSTRAR TAULA DE CLIENTS</a></button>
+      </div>
+
+      <div id="message" class="message"></div>
+    </div>
+  </div>
+
+  <script src="script_form_clients.js"></script>
+</body>
+</html>

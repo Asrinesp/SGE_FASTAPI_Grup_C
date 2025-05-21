@@ -1,0 +1,26 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+#usersModule, #clientsModule {
+  background-color: #3498db;
+  color: white;
+  padding: 15px;
+  margin: 10px auto;
+  text-align: center;
+  width: 200px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#usersModule:hover, #clientsModule:hover {
+  background-color: #2980b9;
+}

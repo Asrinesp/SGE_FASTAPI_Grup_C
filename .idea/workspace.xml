@@ -4,13 +4,31 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a4628cf9-cdd3-4481-89e3-f5530b0d0b26" name="Changes" comment="" />
+    <list default="true" id="a4628cf9-cdd3-4481-89e3-f5530b0d0b26" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/sge_theBear/Fronten/ main_page.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sge_theBear/Fronten/clients/ script_clients.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sge_theBear/Fronten/clients/ styles_clients.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sge_theBear/Fronten/clients/clients_form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sge_theBear/Fronten/clients/clients_table.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sge_theBear/Fronten/clients/script_form_clients.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sge_theBear/Fronten/menu/menus_form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sge_theBear/Fronten/menu/menus_table.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sge_theBear/Fronten/menu/script_form_menus.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sge_theBear/Fronten/menu/script_menus.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProblemsViewState">
@@ -52,24 +70,24 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;dev__akasha&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Akasha Karam/Desktop/LMSG_FASTAPIA&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Akasha Karam/Desktop/SGE_FASTAPI_Grup_C/sge_theBear&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Akasha Karam\Desktop\SGE_FASTAPI_Grup_C\sge_theBear" />
       <recent name="C:\Users\Akasha Karam\Desktop\SGE_FASTAPI_Grup_C\sge_theBear\img" />
       <recent name="C:\Users\Akasha Karam\Desktop\SGE_FASTAPI_Grup_C\sge_theBear\services" />
       <recent name="C:\Users\Akasha Karam\Desktop\SGE_FASTAPI_Grup_C" />
       <recent name="C:\Users\Akasha Karam\Desktop\SGE_FASTAPI_Grup_C\sge_theBear\models" />
-      <recent name="C:\Users\Akasha Karam\Desktop\SGE_FASTAPI_Grup_C\sge_theBear" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Akasha Karam\Desktop\SGE_FASTAPI_Grup_C\sge_theBear\Fronten" />
+      <recent name="C:\Users\Akasha Karam\Desktop\SGE_FASTAPI_Grup_C\sge_theBear" />
       <recent name="C:\Users\Akasha Karam\Desktop\SGE_FASTAPI_Grup_C\sge_theBear\IMG Menu" />
       <recent name="C:\Users\Akasha Karam\Desktop\SGE_FASTAPI_Grup_C\sge_theBear\IMG Client" />
-      <recent name="C:\Users\Akasha Karam\Desktop\SGE_FASTAPI_Grup_C\sge_theBear" />
       <recent name="C:\Users\Akasha Karam\Desktop\SGE_FASTAPI_Grup_C\sge_theBear\img" />
-      <recent name="C:\Users\Akasha Karam\Desktop\SGE_FASTAPI_Grup_C" />
     </key>
   </component>
   <component name="RunManager" selected="Python.client (1)">
@@ -205,5 +223,16 @@
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName=".env" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
