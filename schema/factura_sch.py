@@ -13,3 +13,4 @@ def fact_schema(factura) -> dict:
 # Crea una lista de diccionarios con la funcion anterior
 def fact_schemas(facturas) -> list[dict]:
     return [fact_schema(factura) for factura in facturas]
+

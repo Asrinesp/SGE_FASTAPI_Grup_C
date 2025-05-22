@@ -58,6 +58,11 @@ class FacturaCreate(BaseModel):
     data: str
     preu_total: int
 
+# El base model de puntos de venta
+class PuntosVenta(BaseModel):
+    id: int
+    ubicacion: str
+
 # ROOT
 @app.get("/root", response_model=List[dict])
 async def read_root():
@@ -205,6 +210,7 @@ def remove_menu_item(item_id: int, db: Session = Depends(get_db)):
     return result
 
 ## ALVARO
+## Puntos de venta
 @app.get("/puntosV/", response_model=list[dict])
 def read_all_puntoV(db: Session = Depends(get_db)):
     result = get_all_puntVs(db)
@@ -215,10 +221,16 @@ def read_all_puntoV(db: Session = Depends(get_db)):
 def read_one_puntV(numero: int, db: Session = Depends(get_db)):
     result = get_one_puntV(numero, db)
     return result
-###CREAMOS UNO
-@app.post("/puntV/", response_model=dict)
-def create_puntV(id: int, ubicacion: str, db: Session = Depends(get_db)):
-    result = add_new_puntV(id, ubicacion, db)
+###CREAMOS UNO El anterior
+# @app.post("/puntV/crear", response_model=dict)
+# def create_puntV(id: int, ubicacion: str, db: Session = Depends(get_db)):
+#     result = add_new_puntV(id, ubicacion, db)
+#     return result
+
+###CREAMOS UNO El nuevo
+@app.post("/puntV/crear", response_model=dict)
+def create_puntV(puntV: PuntosVenta, db: Session = Depends(get_db)):
+    result = add_new_puntV(puntV.id, puntV.ubicacion, db)
     return result
 
 ##MODIFICAMOS UNO

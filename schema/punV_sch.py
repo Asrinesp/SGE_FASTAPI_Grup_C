@@ -1,6 +1,6 @@
 def schema(pVto) -> dict:
-    send_pVto = { "id":pVto["id"],
-                "ubicacion": pVto["ubicacion"]
+    send_pVto = { "id":pVto.id,
+                "ubicacion": pVto.ubicacion
     }
     return send_pVto
 
@@ -10,6 +10,6 @@ def pos_schema(pos) -> dict:
     return response
 
 ##TRANSFORMAMOS MUCHOS
-def pos_schemas(posS)->list[dict]:
-    response = [pos_schema(pos) for pos in posS]
+def pos_schemas(posS) -> list[dict]:
+    response = [schema(pos) for pos in posS]
     return response
